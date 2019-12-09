@@ -1,4 +1,4 @@
-const hebrewToNumber = (heb) => {
+const toNumber = (heb) => {
     let sum=0;
     let temp=0;
     for(let i in heb){
@@ -40,11 +40,11 @@ const hebrewToNumber = (heb) => {
 
 
 
-function convertThousands(thousands){
-    var all=thousands.split("'");
+function hebrewToNumber(heb){
+    var all=heb.split("'");
         var sum=0;
         for (var i in all){
-            sum += hebrewToNumber(all[i])*Math.pow (1000 ,all.length-i)
+            sum += toNumber(all[i])*Math.pow (1000 ,all.length-i-1)
 
     }
     return sum;
