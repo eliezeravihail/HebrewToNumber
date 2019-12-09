@@ -1,5 +1,4 @@
 const hebrewToNumber = (heb) => {
-    heb=heb.replace("טו","יה").replace("טז","יו");
     let sum=0;
     let temp=0;
     for(let i in heb){
