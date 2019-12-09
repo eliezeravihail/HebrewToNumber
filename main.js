@@ -40,13 +40,13 @@ const hebrewToNumber = (heb) => {
 
 
 
-/* //to next version
 function convertThousands(thousands){
     var all=thousands.split("'");
-    if(all.length>1){
-        let sum=1;
-        for (let i in all){
-            sum = sum*1000*hebrewToNumber(all[i])
-            }
+        var sum=0;
+        for (var i in all){
+            sum += hebrewToNumber(all[i])*Math.pow (1000 ,all.length-i)
+
     }
-*/
+    return sum;
+}
+
